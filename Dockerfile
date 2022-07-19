@@ -1,6 +1,8 @@
 FROM fedora:latest
 
-RUN dnf -y update && dnf -y install httpd 
+RUN dnf -y update && dnf -y install httpd
+
+COPY my-info.html /var/www/html/my-info.html
 
 EXPOSE 80
 
