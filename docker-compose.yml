@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  my-app:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ~/home/ali/assignment4/data:/var/www/html/data
+    ports:
+      - "80:80"
