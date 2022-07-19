@@ -1,11 +1,13 @@
+FROM fedora:latest As builder
+
+COPY myfile1.txt myfile1.txt 
+
+CMD [ "cat", "myfile1.txt" ]
+
+
+
 FROM fedora:latest
 
-RUN dnf -y update && dnf -y install httpd
+COPY myfile2.txt myfile2.txt 
 
-COPY my-info.html /var/www/html/my-info.html
-
-EXPOSE 80
-
-ENTRYPOINT [ "/usr/sbin/httpd" ] 
-
-CMD [ "-D", "FOREGROUND" ]
+CMD [ "cat", "myfile12txt" ]
