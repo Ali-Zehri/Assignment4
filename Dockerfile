@@ -1,8 +1,6 @@
 FROM fedora:latest
 
-RUN dnf -y update && dnf -y install httpd tuxpaint vim 
-
-COPY my-info.html /var/www/html/my-info.html
+RUN dnf -y update && dnf -y install httpd 
 
 EXPOSE 80
 
